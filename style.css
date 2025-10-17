@@ -1,37 +1,170 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-    
-    
-    
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.central{
-    background-color: blue;
-    width: 300px;
-    height: auto;
-    border-radius: 20px;
-    text-align: center;
-    padding: 50px;
-    margin: 50px auto;
+/* ===== ESTILO GERAL ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-input{
-    background-color: chartreuse;
-    height: 70px;
-    border-radius: 20px;
+/* ===== CONTAINER CENTRAL ===== */
+.central {
+  background-color: white;
+  width: 350px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+.central h1 {
+  color: #0077b6;
+  margin-bottom: 25px;
+}
 
+/* ===== INPUT E BOTÃO ===== */
+.input {
+  width: 100%;
+  background-color: #d8f3dc;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
 
-button{
-    background-color: green;
+.botao {
+  width: 100%;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: #0096c7;
+  transform: translateY(-2px);
+}
+
+/* ===== CARD DA MOEDA ===== */
+.card-moeda {
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-moeda img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.card-moeda p {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+
+/* === TABLETS (768px) === */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .central {
+    width: 90%;
+    padding: 30px 15px;
+  }
+
+  .central h1 {
+    font-size: 1.8rem;
+  }
+
+  .input, .botao {
+    font-size: 0.95rem;
+  }
+}
+
+/* === CELULARES GRANDES (480px) === */
+@media (max-width: 480px) {
+  .central {
+    width: 95%;
+    padding: 25px 10px;
+  }
+
+  .central h1 {
+    font-size: 1.6rem;
+  }
+
+  .input {
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .botao {
     height: 40px;
-    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+
+  .card-moeda img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .card-moeda p {
+    font-size: 0.9rem;
+  }
 }
 
-img{
-    width: 70px;
-    height: 50px auto;
+/* === CELULARES MUITO PEQUENOS (até 360px) === */
+@media (max-width: 360px) {
+  .central {
+    width: 100%;
+    padding: 20px 8px;
+  }
+
+  .central h1 {
+    font-size: 1.4rem;
+  }
+
+  .input {
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .botao {
+    height: 38px;
+    font-size: 0.85rem;
+  }
+
+  .card-moeda {
+    padding: 15px;
+  }
+
+  .card-moeda img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card-moeda p {
+    font-size: 0.85rem;
+  }
 }
